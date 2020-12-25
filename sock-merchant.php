@@ -19,11 +19,11 @@ function sockMerchant($count, $colors) {
 		$counts[$color]++;
 	}
 
-	$counts = array_map(function ($socks) {
+	$pairs = array_map(function ($socks) {
 		return (int) floor($socks / 2);
 	}, $counts);
 
-	return array_sum($counts);
+	return array_sum($pairs);
 }
 
 test('sockMerchant', [
