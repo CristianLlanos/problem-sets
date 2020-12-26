@@ -8,9 +8,9 @@ function test(callback, cases) {
 function assert_equals(expected, actual, message = '') {
     if (expected != actual) {
         let value = format(actual);
-        console.log([`${message} - `, `Expected ${expected}, got ${value}`].join(' '));
+        console.log([message, `Expected ${expected}, got ${value}`].join(' - '));
     } else {
-        console.log([`${message} - `, "Passed!"].join(' '));
+        console.log([message, "Passed!"].join(' - '));
     }
 }
 
