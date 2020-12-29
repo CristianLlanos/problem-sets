@@ -21,10 +21,10 @@ function concat(input: string[]): string {
 
     let result = '';
 
-    do {
+    while (start) {
         result += start;
         start = paths.get(start);
-    } while (start);
+    }
 
     return result;
 }

@@ -16,10 +16,10 @@ function concat(input) {
         }
     }
     let result = '';
-    do {
+    while (start) {
         result += start;
         start = paths.get(start);
-    } while (start);
+    }
     return result;
 }
 testing_1.default(concat, [
