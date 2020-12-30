@@ -9,8 +9,9 @@ function test($callback, $cases) {
 
 function assert_equals($expected, $actual, $message = '') {
 	if ($expected != $actual) {
-		$value = format($actual);
-		echo implode(' ', ["$message -", "Expected $expected, got $value\n"]);
+		$expected = format($expected);
+		$actual = format($actual);
+		echo implode(' ', ["$message -", "Expected $expected, got $actual\n"]);
 	} else {
 		echo implode(' ', ["$message -", "Passed!\n"]);
 	}
