@@ -11,9 +11,9 @@ function assert_equals($expected, $actual, $message = '') {
 	if ($expected != $actual) {
 		$expected = format($expected);
 		$actual = format($actual);
-		echo implode(' ', ["$message -", "Expected $expected, got $actual\n"]);
+		echo implode(' ', ["❌️ $message -", "Expected $expected, got $actual\n"]);
 	} else {
-		echo implode(' ', ["$message -", "Passed!\n"]);
+		echo "✅ $message\n";
 	}
 }
 
