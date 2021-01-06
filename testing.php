@@ -2,7 +2,7 @@
 
 function test($callback, $cases) {
 	foreach ($cases as $case) {
-		$output = $callback(...$case[0]);
+		$output = $callback(... (array) $case[0]);
 		assert_equals($case[1], $output, format($case[0]));
 	}
 }
